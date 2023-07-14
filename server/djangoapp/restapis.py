@@ -4,13 +4,37 @@ import json
 from requests.auth import HTTPBasicAuth
 
 
-# Create a `get_request` to make HTTP GET requests
-# e.g., response = requests.get(url, params=params, headers={'Content-Type': 'application/json'},
-#                                     auth=HTTPBasicAuth('apikey', api_key))
+def get_request(url, **kwargs):
+    print(kwargs)
+    try:
+        if "apikey" in kwargs:
+            response = requests.get(url, headers={
+                                    'Content-Type': 'application/json'}, params=kwargs, auth=HTTPBasicAuth("apikey", kwargs["apikey"]))
+        else:
+            response = requests.get(
+                url, headers={'Content-Type': 'application/json'}, params=kwargs)
+        status_code = response.status_code
+        print("With status {} ".format(status_code))
+        json_data = json.loads(response.text)
+    except Exception as e:
+        print("Error ", e)
+    status_code = response.status_code
+    print("With status {} ".format(status_code))
+    json_data = json.loads(response.text)
+    return json_data
 
-
-# Create a `post_request` to make HTTP POST requests
-# e.g., response = requests.post(url, params=kwargs, json=payload)
+def post_request(url, json_payload, **kwargs):
+    print(json_payload)
+    print("POST from {} ".format(url))
+    try:
+        response = requests.post(url, params=kwargs, json=json_payload)
+        status_code = response.status_code
+        print("With status {} ".format(status_code))
+        json_data = json.loads(response.text)
+        print(json_data)
+        return json_data
+    except:
+        print("Network exception occurred")
 
 
 # Create a get_dealers_from_cf method to get dealers from a cloud function
