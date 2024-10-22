@@ -1,6 +1,6 @@
 # Car Dealer Review Application
 
-This project is a cloud-based web application that allows users to browse car dealerships, view reviews, and submit their own reviews for dealerships. The application integrates IBM Watson's Natural Language Understanding (NLU) service to analyze customer sentiment and provides a seamless user experience through dynamic pages, user authentication, and cloud deployment. ** This project was developed as a part of IBM Full Stack Software Developer Specialization**
+This project is a cloud-based web application that allows users to browse car dealerships, view reviews, and submit their own reviews for dealerships. The application integrates IBM Watson's Natural Language Understanding (NLU) service to analyze customer sentiment and provides a seamless user experience through dynamic pages, user authentication, and cloud deployment. **This project was developed as a part of IBM Full Stack Software Developer Specialization**
 
 ## Project Overview
 
