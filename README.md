@@ -50,10 +50,8 @@ Users can log in and submit reviews for a dealer. The review form allows users t
 
 The application’s backend is powered by IBM Cloud Functions. These serverless functions are used to fetch dealer data and manage user-submitted reviews.
 
-## License
+## 5. License
 
-This project is licensed under the MIT License, which allows you to freely use, modify, and distribute the code as long as the original copyright notice and permission notice are included in all copies or substantial portions of the software.
+This project is licensed under the Apache License 2.0, which allows you to use, modify, and distribute the code under certain conditions. You must include a copy of the license and provide proper attribution if you make any changes.
 
-You can view the full text of the MIT License in the [LICENSE](LICENSE) file provided in this repository.
-
-By contributing to this project, you agree that your contributions will be licensed under the same MIT License.
+You can read the full text of the Apache 2.0 License in the [LICENSE](LICENSE) file provided in this repository.
